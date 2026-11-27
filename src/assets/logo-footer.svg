@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="252" height="60" viewBox="0 0 252 60">
+  <circle cx="30" cy="30" r="27" fill="#30271d" stroke="#d9b777"/>
+  <path d="M20 42V18m0 15 17-15m-9 9 11 15" fill="none" stroke="#f3d9ab" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="37" cy="18" r="2.4" fill="#f3d9ab"/>
+  <circle cx="39" cy="42" r="2.4" fill="#f3d9ab"/>
+  <text x="70" y="29" fill="#fff9ef" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="-.4">Krankenfahrdienst</text>
+  <path d="M71 43h18" stroke="#d9b777" stroke-width="1.4"/>
+  <text x="96" y="47" fill="#f3d9ab" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="3.5">K&#214;LN</text>
+</svg>
