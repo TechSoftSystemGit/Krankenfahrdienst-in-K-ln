@@ -1,0 +1,14 @@
+{
+  "name": "krankenfahrdienst-koeln",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:preview": "node build.mjs --preview",
+    "preview": "node serve.mjs --preview"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

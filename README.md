@@ -13,6 +13,8 @@ The header language chooser uses same-origin dictionaries in `src/assets/transla
 
 ## Static hosting package
 
+For Hostinger's Web App Git import, choose branch `main`, framework preset **Other**, Node.js 22 or newer, and package manager **npm**. Use the repository root, build command `npm run build`, and output directory `dist`. Leave the entry file empty because Hostinger serves the generated static files.
+
 The ZIP contains the contents of `dist/`, with `index.html` and `assets/` at its root. Extract it into the document root of the selected site, commonly `public_html` on shared hosting. The directory routes use their own `index.html` files. The site expects to be served at the domain root over HTTPS.
 
 To refresh the package after changing settings, run:
