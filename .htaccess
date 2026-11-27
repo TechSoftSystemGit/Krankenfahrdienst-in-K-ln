@@ -1,0 +1,17 @@
+# Hostinger can publish the repository root for custom builds.
+# Serve only the generated site from dist in that deployment mode.
+RewriteEngine On
+
+# Leave hosting verification and certificate renewal paths to the host.
+RewriteRule ^\.well-known/ - [L]
+
+RewriteRule ^$ dist/index.html [END]
+
+RewriteCond %{DOCUMENT_ROOT}/dist/$1 -f
+RewriteRule ^(assets/.+|robots\.txt|sitemap\.xml|index\.html)$ dist/$1 [END]
+
+RewriteCond %{DOCUMENT_ROOT}/dist/$1/index.html -f
+RewriteRule ^([a-z0-9-]+)/?$ dist/$1/index.html [END]
+
+# Prevent the source files and build configuration from being served.
+RewriteRule ^ - [R=404,L]
