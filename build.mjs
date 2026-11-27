@@ -158,8 +158,11 @@ const homepage = `
 <div class="quick wrap"><div>${icon('phone')}<span><small>Telefonischer Kontakt</small>${link(call, site.phone)}</span></div><div>${icon('calendar')}<span><small>Fahrtplanung</small>Einzelne oder mehrere Termine</span></div><div>${icon('pin')}<span><small>Einsatzgebiet</small>Köln und Umgebung</span></div></div>
 <section class="section wrap ride-intro" aria-labelledby="ride-intro-title">
   <div class="ride-intro-photos">
-    <figure class="vehicle"><img src="/assets/home-angehoerige.jpg" width="1080" height="720" alt="Zwei Frauen planen einen Termin am Kalender" loading="lazy" decoding="async"></figure>
-    <figure class="vehicle"><img src="/assets/fahrzeug.jpg" width="1536" height="1024" alt="Dunkelgrauer Personenwagen vor einem Gebäude" loading="lazy" decoding="async"></figure>
+    <figure class="vehicle intro-family"><img src="/assets/home-angehoerige.jpg" width="1080" height="720" alt="Zwei Frauen planen einen Termin am Kalender" loading="lazy" decoding="async"></figure>
+    <figure class="vehicle intro-vehicle"><img src="/assets/fahrzeug.jpg" width="1536" height="1024" alt="Dunkelgrauer Personenwagen vor einem Gebäude" loading="lazy" decoding="async"></figure>
+    <figure class="vehicle intro-passengers"><img src="/assets/home-booking.jpg" width="1680" height="600" alt="Zwei Frauen stehen neben einem Personenwagen" loading="lazy" decoding="async"></figure>
+    <span class="intro-route-badge" aria-hidden="true">${icon('route')}</span>
+    <span class="intro-spark" aria-hidden="true"></span>
   </div>
   <div class="ride-intro-copy">
     <h2 id="ride-intro-title">Ihre Fahrt in guten Händen</h2>
@@ -171,7 +174,7 @@ const homepage = `
 <section class="section wrap home-services" id="leistungen">${intro('Leistungen','Krankenfahrten rund um Ihren Termin','Geplante Fahrten für medizinische Termine in Köln und Umgebung.')}${showcaseCards(routes.length > 1 ? routes : [mainService, ...journeyCards.slice(1)])}</section>
 <section class="section pale home-process" id="so-funktionierts" aria-labelledby="home-process-title"><div class="wrap">
   <header class="section-title"><h2 id="home-process-title">So funktioniert Ihre Krankenfahrt</h2></header>
-  <ol class="process-steps">${howItWorks.map(([symbol, title, copy]) => `<li><span class="process-icon">${icon(symbol)}</span><h3>${title}</h3><p>${copy}</p></li>`).join('')}</ol>
+  <ol class="process-steps" role="list">${howItWorks.map(([symbol, title, copy]) => `<li><span class="process-icon">${icon(symbol)}</span><h3>${title}</h3><p>${copy}</p></li>`).join('')}</ol>
   <div class="process-action">${link('#schnellanfrage', 'Fahrt anfragen', 'button')}</div>
 </div></section>
 <section class="section wrap split home-enquiry" id="schnellanfrage" aria-labelledby="quick-ride-heading"><div><p class="eyebrow">Ihre Fahrt planen</p><h2 id="quick-ride-heading">Fahrt anfragen</h2><p>Für die erste Anfrage genügen Termin, Start und Ziel sowie eine Nummer für Rückfragen. Die Fahrt steht nach persönlicher Bestätigung fest.</p></div><div class="enquiry"><p>Bereiten Sie Ihre Anfrage vor und senden Sie sie aus Ihrer E-Mail-App.</p>${rideForm('quick-ride', true)}</div></section>
