@@ -302,6 +302,8 @@ html { scroll-padding-top: 6.5rem; }
 .check input { width: 1.2rem; height: 1.2rem; accent-color: var(--bronze); }
 @media (max-width: 84rem) {
   .header-inner { display: flex; flex-wrap: wrap; gap: .2rem 1rem; padding-block: .75rem; }
+  .header-tools { margin-inline-start: auto; }
+  .header-tools .menu-toggle { min-height: 44px; }
   .header-request { display: none; }
   #navigation .mobile-request { display: inline-flex; }
   #navigation { order: 1; }
